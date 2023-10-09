@@ -4,6 +4,6 @@ from .models import musings
 # Create your views here.
 
 def index(request):
-    musing = musings.objects.get()
+    musing = musings.objects.all()
     return render(request, 'core/index.html', {'musings':musing})
 
